@@ -1,5 +1,6 @@
 body {
     background: rgb(174, 229, 224);
+    height: 100vh;
 }
 
 #container {
@@ -19,6 +20,7 @@ form {
     padding: 10px 5.5rem;
     border-radius: 10px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.3);
+    width: 15vw;
 }
 
 label {
@@ -29,6 +31,19 @@ input {
     padding: 3px;
     border-radius: 4px;
     border: none;
+}
+
+.FirstnameError,
+.LastnameError,
+.UsernameError,
+.EmailError,
+.PhoneError,
+.PasswordError,
+.ConfirmPasswordError {
+    color: red;
+    margin: 0px;
+    text-align: left;
+    line-break: normal;
 }
 
 button {
@@ -45,6 +60,6 @@ button:hover {
     background-color: #3e828e;
 }
 
-a{
+a {
     text-decoration: none;
 }

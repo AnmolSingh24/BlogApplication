@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-     <link rel="stylesheet" href="LoginPage.css">
-     <script src="LoginPage.js"></script>
+    <link rel="stylesheet" href="LoginPage.css">
+    <script src="LoginPage.js"></script>
 </head>
+
 <body>
     <div class="container">
         <h1>Login Page</h1>
 
         <form id="login-form" method="post">
             <label for="username">Username </label>
-               <input type="text" id="Username" name="u1" placeholder="Username" required>
+            <input type="text" id="Username" name="u1" placeholder="Username" required>
+            <p id="Login-Username-Error" class="LoginUsernameError"></p>
 
             <label for="password">Password </label>
-                <input type="password" id="Password" name="u2" placeholder="Password" required>
+            <input type="password" id="Password" name="u2" placeholder="Password" required>
+            <p id="Login-Password-Error" class="LoginPasswordError"></p>
 
-                <button type="button" onclick="showUsers()">Login</button>
+            <button type="button" onclick="Login()">Login</button>
             <p>Don't have an account? <a href="SignUp.html"> Signup</a></p>
         </form>
     </div>
 </body>
+
 </html>

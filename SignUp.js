@@ -1,35 +1,63 @@
-function register() {
-    var firstname = document.getElementById('Firstname').value;
-    var lastname = document.getElementById('Lastname').value;
-    var username = document.getElementById('Username').value;
-    var email = document.getElementById('Email').value;
-    var phone = document.getElementById('PhoneNumber').value;
-    var password = document.getElementById('Password').value;
+function Signup() {
+    var signUpFirstname = document.getElementById('Firstname').value;
+    var signUpLastname = document.getElementById('Lastname').value;
+    var signUpUsername = document.getElementById('Username').value;
+    var signUpEmail = document.getElementById('Email').value;
+    var signUpPhone = document.getElementById('PhoneNumber').value;
+    var signUpPassword = document.getElementById('Password').value;
+    var signUpConfirmPassword = document.getElementById('ConfirmPassword').value;
 
-    if (firstname === '') {
-        alert('Please enter your First name.');
-        return;
+    if (signUpFirstname === '') {
+        document.getElementById("Firstname-Error").innerHTML = "Please enter your First Name.";
+        return false;
     }
-    else if (lastname === ' ') {
-        alert('Please enter your Last name.');
-        return;
+
+    if (signUpLastname === '') {
+        document.getElementById("Lastname-Error").innerHTML = "Please enter your Last Name.";
+        return false;
     }
-    else if (username === 0 - 9 && username === a - z || username.length >= 15) {
-        alert('Please enter your Username.');
-        return;
+
+    if (signUpUsername === '') {
+        document.getElementById("Username-Error").innerHTML = "Please enter your Username";
+        return false;
+    } else if (signUpUsername.length > 4 || signUpUsername.length < 10) {
+        document.getElementById("Username-Error").innerHTML = "Username must be 5 to 10 characters long.";
+        return false;
     }
-    else if (email === 0 - 9 && email === a - z) {
-        alert('Please enter your Email.');
-        return;
+
+    if (signUpEmail === '') {
+        document.getElementById("Email-Error").innerHTML = "Please enter your Email.";
+        return false;
     }
-    else if (phone <= 10) {
-        alert('Please enter your Phone Number.');
-        return;
+
+    if (signUpPhone === '') {
+        document.getElementById("PhoneNumber-Error").innerHTML = "Please enter your phone number";
+        return false;
+    } else if (signUpPhone.length < 10) {
+        document.getElementById("PhoneNumber-Error").innerHTML = "Phone number must be at least 10 characters long.";
+        return false;
     }
-    else if (password.length >= 8) {
-        alert('Please enter your Password.');
-        return;
-    } else
+
+    if (signUpPassword === '') {
+        document.getElementById("Password-Error").innerHTML = "Please enter your Password";
+        return false;
+    } else if (signUpPassword.length < 8) {
+        document.getElementById("Password-Error").innerHTML = "Password must be at least 8 characters long.";
+        return false;
+    }
+
+    if (signUpConfirmPassword === '') {
+        document.getElementById("Confirm-Password-Error").innerHTML = "Please confirm your Password";
+        return false;
+    } else if (signUpConfirmPassword.length < 8) {
+        document.getElementById("Confirm-Password-Error").innerHTML = "Password must be at least 8 characters long.";
+        return false;
+    } else if (signUpConfirmPassword !== signUpPassword) {
+        document.getElementById("Confirm-Password-Error").innerHTML = "Password does not match";
+        return false;
+    }
+
+    else
         alert("Thanks for Signing Up!");
     SignUpRegister();
 }
@@ -43,7 +71,7 @@ function SignUpRegister() {
         password1: password1,
         id: Date.now()
     }
-    
+
     var sign2 = [];
     var sign2 = JSON.parse(localStorage.getItem("sign1")) || [];
     console.log(JSON.stringify(sign2))

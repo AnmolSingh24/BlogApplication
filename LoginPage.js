@@ -1,8 +1,9 @@
 var users = JSON.parse(localStorage.getItem("sign1")) || [];
-function showUsers() {
-    const username = document.getElementById("Username");
-    const password = document.getElementById("Password");
-    if (users.find(user => user.username1 === username.value && user.password1 === password.value)) {
+
+function Login() {
+    const loginUsername1 = document.getElementById("Username");
+    const loginPassword1 = document.getElementById("Password");
+    if (users.find(user => user.username1 === loginUsername1.value && user.password1 === loginPassword1.value)) {
         alert("✅ Login Successful");
         window.location = "SignUpBlog.html"
     } else {

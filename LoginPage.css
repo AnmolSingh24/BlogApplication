@@ -30,6 +30,14 @@ input {
     border: none;
 }
 
+.LoginUsernameError,
+.LoginPasswordError{
+    color: red;
+    margin: 0px;
+    text-align: left;
+    line-break: normal;
+}
+
 button{
     background-color: #07f8f4;
     color: white;
