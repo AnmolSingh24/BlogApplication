@@ -20,7 +20,7 @@ function Signup() {
     if (signUpUsername === '') {
         document.getElementById("Username-Error").innerHTML = "Please enter your Username";
         return false;
-    } else if (signUpUsername.length > 4 || signUpUsername.length < 10) {
+    } else if (signUpUsername.length > 4 && signUpUsername.length < 10) {
         document.getElementById("Username-Error").innerHTML = "Username must be 5 to 10 characters long.";
         return false;
     }
