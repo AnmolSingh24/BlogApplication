@@ -1,0 +1,93 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, sans-serif;
+	background-color: rgb(174, 229, 224);
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+.container {
+	max-width: 800px;
+	margin: 0 auto;
+	padding: 20px;
+	background-color: #FFFFFF;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+	font-size: 37px;
+	font-weight: bold;
+	margin: 0;
+}
+
+h2 {
+	color: rgb(38, 137, 144);
+}
+
+p {
+	font-weight: 550;
+	color: rgb(3, 44, 48);
+}
+
+.button-container {
+	margin-top: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+button {
+	padding: 10px 15px;
+	border: none;
+	border-radius: 5px;
+	background-color: rgb(89, 196, 187);
+	color: #FFFFFF;
+	font-size: 18px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: rgb(26, 184, 171);
+}
+
+#post {
+	display: block;
+	flex-direction: row;
+	width: 90%;
+	border-radius: 1.5rem;
+	box-shadow: 0.2rem 0.5rem 1rem rgba(0, 0, 0, 0.2);
+	text-align: center;
+	position: relative;
+	margin: 2rem 2rem 2rem 4.5rem;
+	overflow: hidden;
+	transition: 0.3s;
+	background: rgb(219, 226, 226);
+}
+
+.post-container {
+	margin-top: 20px;
+	background-color: rgb(239, 245, 244);
+	padding: 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	transform: scale(1.03);
+	box-shadow: 1rem 0.5rem 1.2rem rgba(0, 0, 0, 0.3);
+	text-decoration: none;
+}
+
+.footer-container {
+	background: rgb(138, 202, 197);
+}
+
+.footer-container p {
+	text-align: center;
+	color: rgb(13, 126, 116);
+	font-size: 18.5px;
+	bottom: 0px;
+	border: 2px solid rgb(87, 178, 170);
+}
+
+.footer-container span {
+	color: rgb(2, 72, 66);
+}

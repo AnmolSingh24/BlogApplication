@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Blog</title>
+    <link rel="stylesheet" href="SignUpBlog.css">
+</head>
+
+<body>
+    <!-- header starts -->
+    <header class="container">
+        <div class="button-container">
+            <a href="BlogDashboard.html"><button class="add-button">ADD BLOG</button></a>
+            <h1>MY BLOGS</h1>
+            <a href="DeleteBlog.html"><button class="delete-button">DELETE BLOG</button></a>
+        </div>
+    </header>
+    <!-- header ends -->
+
+    <!-- main starts -->
+    <main id="post">
+        <article class="post-container"></article>
+    </main>
+    <!-- main ends -->
+
+    <!-- Footer Starts -->
+    <footer>
+        <div class="footer-container">
+            <p class="footer-content">Designed By <span>Anmol Singh ❤️</span></p>
+        </div>
+    </footer>
+    <!-- Footer Ends -->
+
+    <!-- Script Starts -->
+    <script>
+        function addBlog() {
+            const b1 = {
+                title: title,
+                content: content,
+                id: Date.now()
+            }
+
+            var b2 = [];
+            var b2 = JSON(localStorage.getItem("b1")) || [];
+            console.log(JSON.stringify(b2))
+            b2.push(b1);
+            console.log(JSON.stringify(b2));
+            localStorage.setItem("b1", JSON.stringify(b2));
+        }
+
+        function showBlogs() {
+            var blogs = JSON.parse(localStorage.getItem("blog1")) || [];
+            console.log(blogs);
+            var list = document.getElementById("post");
+            for (let i = 0; i < blogs.length; i++) {
+                console.log(blogs[i]);
+                var item = document.createElement("div");
+                item.innerHTML = `<article class="post-container">
+        <h2>${blogs[i].title}</h2><br>
+        <p>${blogs[i].content}</p>
+</article>`
+                list.appendChild(item);
+            };
+        }
+        showBlogs();
+    </script>
+    <!-- Script Ends -->
+</body>
+
+</html>
