@@ -58,7 +58,7 @@ function Signup() {
     }
 
     else
-        alert("Thanks for Signing Up!");
+        alert("✅ Signup Successful!");
     SignUpRegister();
 }
 

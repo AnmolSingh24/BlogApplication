@@ -5,7 +5,7 @@ function Login() {
     const loginPassword1 = document.getElementById("Password");
     if (users.find(user => user.username1 === loginUsername1.value && user.password1 === loginPassword1.value)) {
         alert("✅ Login Successful");
-        window.location = "SignUpBlog.html"
+        window.location = "/BlogApplication/Dashboard/Dashboard.html"
     } else {
         alert("❌ Incorrect username or password");
     }
