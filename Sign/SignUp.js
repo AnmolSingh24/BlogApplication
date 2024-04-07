@@ -74,9 +74,7 @@ function SignUpRegister() {
 
     var sign2 = [];
     var sign2 = JSON.parse(localStorage.getItem("sign1")) || [];
-    console.log(JSON.stringify(sign2))
     sign2.push(sign1);
-    console.log(JSON.stringify(sign2));
     localStorage.setItem("sign1", JSON.stringify(sign2));
     window.location = "/BlogApplication/index.html";
 }

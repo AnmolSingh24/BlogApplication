@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup Blog</title>
+    <title>Dashboard</title>
     <link rel="stylesheet" href="/BlogApplication/Dashboard/Dashboard.css">
 </head>
 
@@ -26,14 +26,6 @@
     </main>
     <!-- main ends -->
 
-    <!-- Footer Starts -->
-    <footer>
-        <div class="footer-container">
-            <p class="footer-content">Designed By <span>Anmol Singh ❤️</span></p>
-        </div>
-    </footer>
-    <!-- Footer Ends -->
-
     <!-- Script Starts -->
     <script>
         function addBlog() {
@@ -53,10 +45,8 @@
 
         function showBlogs() {
             var blogs = JSON.parse(localStorage.getItem("blog1")) || [];
-            console.log(blogs);
             var list = document.getElementById("post");
             for (let i = 0; i < blogs.length; i++) {
-                console.log(blogs[i]);
                 var item = document.createElement("div");
                 item.innerHTML = `<article class="post-container">
         <h2>${blogs[i].title}</h2><br>
